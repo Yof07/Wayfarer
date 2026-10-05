@@ -103,6 +103,15 @@ public class PlayerInputManager : MonoBehaviour
         }
         return m_look.activeControl.device.name.Equals(k_mouseDeviceName);
     }
+
+    /// <summary>
+    /// 临时锁定移动方向输入
+    /// </summary>
+    /// <param name="duration">锁定时长（秒）</param>
+    public virtual void LockMovementDirection(float duration = 0.25f)
+    {
+        m_movementDirectionUnlockTime = Time.time + duration;
+    }
     
     /// <summary>
     /// 获取移动方向输入（带十字型死区判断）
@@ -180,6 +189,22 @@ public class PlayerInputManager : MonoBehaviour
     }
 
     public virtual bool GetJumpUp() => m_jump.WasReleasedThisFrame();
+    public virtual bool GetDashDown() => m_dash.WasPressedThisFrame();
+    public virtual bool GetStompDown() => m_stomp.WasPressedThisFrame();
+    public virtual bool GetSpinDown() => m_spin.WasPressedThisFrame();
+    public virtual bool GetAirDiveDown() => m_airDive.WasPressedThisFrame();
+    public virtual bool GetPickAndDropDown() => m_pickAndDrop.WasPressedThisFrame();
+    public virtual bool GetDive() => m_dive.IsPressed();
+    public virtual bool GetGlide() => m_glide.IsPressed();
+    public virtual bool GetGrindBrake() => m_grindBrake.IsPressed();
+    public virtual bool GetReleaseLedgeDown() => m_releaseLedge.WasPressedThisFrame();
+    public virtual bool GetPauseDown() => m_pause.WasPressedThisFrame();
+
+    // 获取奔跑输入是否处于按住状态
+    public virtual bool GetRun() => m_run.IsPressed();
+
+    // 获取奔跑输入是否在本帧松开
+    public virtual bool GetRunUp() => m_run.WasReleasedThisFrame();
 
     // 获取下蹲/爬行输入是否处于按住状态
     public virtual bool GetCrouchAndCraw() => m_crouch.IsPressed();

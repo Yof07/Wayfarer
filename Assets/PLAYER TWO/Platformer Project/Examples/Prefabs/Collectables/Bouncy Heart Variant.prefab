@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 8378897265690657005, guid: 81fc701e85e51e84e830931300902ee0,
         type: 3}
       propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PLAYERTWO.PlatformerProject.PlayerController, Assembly-CSharp
+      value: PlayerController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8378897265690657006, guid: 81fc701e85e51e84e830931300902ee0,
         type: 3}

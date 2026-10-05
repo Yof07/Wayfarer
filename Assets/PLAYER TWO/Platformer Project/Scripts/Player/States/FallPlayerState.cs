@@ -28,13 +28,13 @@ public class FallPlayerState : PlayerState
         player.FaceDirectionSmooth(player.lateralVelocity); // 平滑转向，使角色朝向移动方向
         player.AccelerateToInputDirection();  // 根据玩家输入方向加速
         player.Jump();                        // 空中可跳跃
-        // player.Spin();                        // 空中旋转动作
-        // player.PickAndThrow();                // 空中拾取或投掷物体
-        // player.Dash();                        // 空中冲刺
-        // player.AirDive();                     // 空中俯冲动作
-        // player.StompAttack();                 // 空中踩击攻击
-        // player.Glide();                       // 滑翔动作
-        // player.LedgeGrab();                   // 抓取悬挂
+        player.Spin();                        // 空中旋转动作
+        player.PickAndThrow();                // 空中拾取或投掷物体
+        player.Dash();                        // 空中冲刺
+        player.AirDive();                     // 空中俯冲动作
+        player.StompAttack();                 // 空中踩击攻击
+        player.Glide();                       // 滑翔动作
+        player.LedgeGrab();                   // 抓取悬挂
         
         // 如果落地 → 切换到 Idle 状态
         if (player.isGrounded)
@@ -52,8 +52,8 @@ public class FallPlayerState : PlayerState
     /// </summary>
     public override void OnContact(Player player, Collider other)
     {
-        // player.PushRigidbody(other);
-        // player.WallDrag(other);       // 墙面摩擦减速
-        // player.GrabPole(other);       // 抓住杆或绳索
+        player.PushRigidbody(other);
+        player.WallDrag(other);       // 墙面摩擦减速
+        player.GrabPole(other);       // 抓住杆或绳索
     }
 }

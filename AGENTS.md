@@ -46,4 +46,6 @@ Unity.exe -batchmode -quit -projectPath "E:\Unity\Projects\Wayfarer" -runTests
 - 不要格式化无关的导入资源或演示包脚本。
 - 改动范围保持在用户请求的功能或解释内。
 - 当当前项目缺少符号或需要从完整包补全代码时，对比镜像目录 `E:\Unity\Projects\OdysseyDemo第五章完整包\Assets\PLAYER TWO\Platformer Project\Scripts`，只添加当前缺失且被请求所需的对应文件或代码，不添加多余内容。
+- 搬运或补全源码时，严格以镜像目录或用户提供的源码片段为准，连同对应注释一起搬运；不要自行添加源码中没有的防御判断、状态保护、替代实现或额外行为。
+- 如果源码中的调用依赖当前项目尚未补全的类型、方法或状态，优先保留源码结构并将对应调用暂时注释掉，同时说明缺失依赖；不要为了编译通过而发明新的逻辑。
 - 如果修改了序列化字段、场景、Prefab 或资源，需要说明 Unity 可能会更新对应的 `.meta`、`.unity` 或 `.prefab` 文件。

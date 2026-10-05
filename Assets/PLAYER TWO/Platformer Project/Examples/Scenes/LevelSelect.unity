@@ -474,7 +474,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 235716319}
-        m_TargetAssemblyTypeName: PLAYERTWO.PlatformerProject.GameController, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 235716313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f83f29c6e9e8f4ca3ddc4e2a2160f8, type: 3}
+  m_Script: {fileID: 11500000, guid: d1154b450a333af4c86a2fa9acc38a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &272624239

@@ -66,6 +66,6 @@ public class CrawlingPlayerState : PlayerState
     /// </summary>
     public override void OnContact(Player player, Collider other)
     {
-        //player.WallDrag(other);   // 墙面摩擦减速
+        player.WallDrag(other);   // 墙面摩擦减速
     }
 }

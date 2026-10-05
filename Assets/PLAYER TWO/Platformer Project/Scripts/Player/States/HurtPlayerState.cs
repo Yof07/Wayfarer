@@ -44,7 +44,7 @@ public class HurtPlayerState : PlayerState
             // 血量 <= 0 -> 切换到 Die 状态
             else
             {
-                //player.states.Change<DiePlayerState>();
+                player.states.Change<DiePlayerState>();
             }
         }
     }

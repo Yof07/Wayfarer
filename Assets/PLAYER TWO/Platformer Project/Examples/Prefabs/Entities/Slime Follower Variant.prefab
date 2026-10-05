@@ -120,13 +120,13 @@ PrefabInstance:
     - target: {fileID: 1824014398455109897, guid: 07f1be6ccb495ac43a33cdf46352e4c0,
         type: 3}
       propertyPath: enemyEvents.OnPlayerScaped.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PLAYERTWO.PlatformerProject.EntityStateManager`1[[PLAYERTWO.PlatformerProject.Enemy,
+      value: EntityStateManager`1[[Enemy,
         Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1824014398455109897, guid: 07f1be6ccb495ac43a33cdf46352e4c0,
         type: 3}
       propertyPath: enemyEvents.OnPlayerSpotted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PLAYERTWO.PlatformerProject.EntityStateManager`1[[PLAYERTWO.PlatformerProject.Enemy,
+      value: EntityStateManager`1[[Enemy,
         Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1824014398455109897, guid: 07f1be6ccb495ac43a33cdf46352e4c0,
@@ -172,7 +172,7 @@ PrefabInstance:
     - target: {fileID: 1824014398455109900, guid: 07f1be6ccb495ac43a33cdf46352e4c0,
         type: 3}
       propertyPath: states.Array.data[1]
-      value: PLAYERTWO.PlatformerProject.FollowEnemyState
+      value: FollowEnemyState
       objectReference: {fileID: 0}
     - target: {fileID: 6919912043615601527, guid: 07f1be6ccb495ac43a33cdf46352e4c0,
         type: 3}

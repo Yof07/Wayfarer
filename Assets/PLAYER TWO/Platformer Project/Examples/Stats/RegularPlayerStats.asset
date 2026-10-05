@@ -101,7 +101,7 @@ MonoBehaviour:
   wallJumpLockMovement: 1
   wallDragLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3585
   wallDragSkinOffset: {x: 0, y: 0, z: 0}
   wallDragGravity: 12
   wallJumpDistance: 8
@@ -129,17 +129,17 @@ MonoBehaviour:
   canLedgeHang: 1
   ledgeHangingLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 11777
   ledgeHangingSkinOffset: {x: 0, y: 0, z: 0}
-  ledgeMaxForwardDistance: 0.25
-  ledgeMaxDownwardDistance: 0.25
-  ledgeSideMaxDistance: 0.5
+  ledgeMaxForwardDistance: 0.45
+  ledgeMaxDownwardDistance: 0.45
+  ledgeSideMaxDistance: 0.7
   ledgeSideHeightOffset: 0.15
-  ledgeSideCollisionRadius: 0.25
+  ledgeSideCollisionRadius: 0.3
   ledgeMovementSpeed: 1.5
   canClimbLedges: 1
   ledgeClimbingLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8705
   ledgeClimbingSkinOffset: {x: 0, y: 0, z: 0}
   ledgeClimbingDuration: 1

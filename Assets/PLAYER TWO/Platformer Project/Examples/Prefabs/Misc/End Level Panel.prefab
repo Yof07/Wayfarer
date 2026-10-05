@@ -59,7 +59,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2425441376148008993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a384933dcea774ab8debf15bf7e8ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d84606dbb1d4513ad6359041fd3903c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   autoToggle: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2425441376148009003}
-        m_TargetAssemblyTypeName: PLAYERTWO.PlatformerProject.LevelController, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelController, Assembly-CSharp
         m_MethodName: Finish
         m_Mode: 1
         m_Arguments:
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2425441376148008993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e4206c7a49e4f84ebff9e66e76f03f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ccbc92fd6584fb5bc0d20d6f9201338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   space: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2425441376148008993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba78aa908cea3942b18c1a574e60c5c, type: 3}
+  m_Script: {fileID: 11500000, guid: b6b77b6e290186549b1cd557eb517d86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &2425441376148009002

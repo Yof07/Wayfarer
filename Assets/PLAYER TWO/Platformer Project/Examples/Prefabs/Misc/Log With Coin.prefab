@@ -23,20 +23,22 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906312645935957840}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 906312646617495352}
   - {fileID: 7595826559058392622}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &906312647033323082
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 906312645935957841}
     m_Modifications:
     - target: {fileID: 7348206143673092195, guid: afdc03722a051b745afce65fa88086b3,
@@ -105,6 +107,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdc03722a051b745afce65fa88086b3, type: 3}
 --- !u!1 &7595826559058392617 stripped
 GameObject:
@@ -123,6 +128,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 906312645935957841}
     m_Modifications:
     - target: {fileID: 2034985749537361136, guid: 820aa5fbd34eea7489ffa39b4bd31e04,
@@ -270,8 +276,101 @@ PrefabInstance:
       propertyPath: m_Name
       value: Log
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2034985749537361136, guid: 820aa5fbd34eea7489ffa39b4bd31e04, type: 3}
+    - {fileID: 2034985749537361137, guid: 820aa5fbd34eea7489ffa39b4bd31e04, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2034985749537361148, guid: 820aa5fbd34eea7489ffa39b4bd31e04,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7517041032830382859}
+    - targetCorrespondingSourceObject: {fileID: 2034985749537361148, guid: 820aa5fbd34eea7489ffa39b4bd31e04,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6259903173469896488}
   m_SourcePrefab: {fileID: 100100000, guid: 820aa5fbd34eea7489ffa39b4bd31e04, type: 3}
+--- !u!1 &906312646617495350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2034985749537361148, guid: 820aa5fbd34eea7489ffa39b4bd31e04,
+    type: 3}
+  m_PrefabInstance: {fileID: 1202010632413281226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7517041032830382859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906312646617495350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d84606dbb1d4513ad6359041fd3903c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoToggle: 0
+  activateClip: {fileID: 0}
+  deactivateClip: {fileID: 0}
+  OnActivate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6259903173469896488}
+        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+        m_MethodName: ApplyOffset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7595826559058392617}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 906312646617495353}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 69b91ce10ee80a944ba48baf3a88eb2f, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument:
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  requireStomp: 1
+  requirePlayer: 0
+--- !u!114 &6259903173469896488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906312646617495350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbea6e267dde4cd8875ac79da7257a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: 0, y: -1.9, z: 0}
+  duration: 0
+  resetDuration: 0
 --- !u!4 &906312646617495352 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2034985749537361138, guid: 820aa5fbd34eea7489ffa39b4bd31e04,

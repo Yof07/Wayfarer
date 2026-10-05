@@ -30,6 +30,10 @@ public class IdlePlayerState : PlayerState
         player.Jump();
         // 下落处理
         player.Fall();
+        // 旋转处理
+        player.Spin();
+        // 拾取/投掷处理
+        player.PickAndThrow();
         
         var inputDirection = player.inputs.GetMovementDirection();
         Debug.Log($"Input Direction: {inputDirection}");

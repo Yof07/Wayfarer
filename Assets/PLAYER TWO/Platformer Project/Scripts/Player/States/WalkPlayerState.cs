@@ -29,6 +29,12 @@ public class WalkPlayerState : PlayerState
         player.Jump();
         // 下落处理
         player.Fall();
+        // 冲刺处理
+        player.Dash();
+        // 空中旋转处理
+        player.Spin();
+        // 拾取/投掷处理
+        player.PickAndThrow();
         
         // 获取玩家输入方向（相机方向）
         var inputDirection = player.inputs.GetMovementCameraDirection();
@@ -74,5 +80,8 @@ public class WalkPlayerState : PlayerState
     /// 碰撞检测逻辑
     /// - 空闲状态通常不需要额外碰撞处理
     /// </summary>
-    public override void OnContact(Player player, Collider other) { }
+    public override void OnContact(Player player, Collider other)
+    {
+        player.PushRigidbody(other);
+    }
 }

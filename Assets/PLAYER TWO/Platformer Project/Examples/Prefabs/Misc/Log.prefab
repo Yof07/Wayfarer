@@ -27,13 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034985749537361148}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1997066870059487669}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2034985749537361149
 BoxCollider:
@@ -43,9 +44,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034985749537361148}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2034985749537361136
@@ -57,19 +66,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2034985749537361148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a384933dcea774ab8debf15bf7e8ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 11500000, guid: 3d84606dbb1d4513ad6359041fd3903c, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
   autoToggle: 0
-  requireStomp: 1
-  requirePlayer: 0
   activateClip: {fileID: 0}
   deactivateClip: {fileID: 0}
   OnActivate:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2034985749537361137}
-        m_TargetAssemblyTypeName: PLAYERTWO.PlatformerProject.Mover, Assembly-CSharp
+        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
         m_MethodName: ApplyOffset
         m_Mode: 1
         m_Arguments:
@@ -77,12 +84,14 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
   OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  requireStomp: 1
+  requirePlayer: 0
 --- !u!114 &2034985749537361137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,9 +101,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2034985749537361148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f20bb1502facf8d40809178c32ef533e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Script: {fileID: 11500000, guid: bbea6e267dde4cd8875ac79da7257a6a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
   offset: {x: 0, y: -1.9, z: 0}
   duration: 0
   resetDuration: 0
@@ -109,6 +118,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -199,6 +209,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 2034985749537361138}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 641b801d79f418241a1464e8ebefca1c,
@@ -262,6 +273,9 @@ PrefabInstance:
       value: Log
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 641b801d79f418241a1464e8ebefca1c, type: 3}
 --- !u!4 &1997066870059487669 stripped
 Transform:

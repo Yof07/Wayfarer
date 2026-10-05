@@ -49,7 +49,7 @@ public class CrouchPlayerState : PlayerState
             // 2. 玩家在下蹲状态按下“跳跃键” -> 执行后空翻
             else if (player.inputs.GetJumpDown())
             {
-                //player.Backflip(player.stats.current.backflipBackwardForce);
+                player.Backflip(player.stats.current.backflipBackwardForce);
             }
         }
         else

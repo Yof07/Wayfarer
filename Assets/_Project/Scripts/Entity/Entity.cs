@@ -556,7 +556,11 @@ public abstract class Entity<T> : EntityBase where T : Entity<T>
         }
     }
 
-    // 启用或禁用自定义碰撞，禁用角色控制器，启用自定义碰撞组件
+    /// <summary>
+    /// 使用自定义碰撞体
+    /// 如果开启，则使用自定义的碰撞体，否则使用默认的控制器
+    /// </summary>
+    /// <param name="value"></param>
     public virtual void UseCustomCollision(bool value)
     {
         controller.enabled = !value;

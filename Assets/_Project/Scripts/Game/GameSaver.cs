@@ -21,10 +21,8 @@ public class GameSaver : Singleton<GameSaver>
 
     /// <summary>
     /// 当前使用的存档模式。
-    /// 默认使用 JSON：可直接查看和编辑，且不依赖已被 .NET 标记为废弃的 BinaryFormatter。
-    /// Binary 模式仅在 Editor / Mono 运行时可用，在 IL2CPP、WebGL 等 AOT 平台上会失效。
     /// </summary>
-    public Mode mode = Mode.JSON;
+    public Mode mode = Mode.Binary;
 
     /// <summary>
     /// 存档文件的基础文件名（不包含扩展名和槽位号）。
@@ -128,9 +126,6 @@ public class GameSaver : Singleton<GameSaver>
     /// <summary>
     /// 以二进制格式保存数据到文件。
     /// 这种方式存储空间小，但不方便直接查看。
-    /// 注意：BinaryFormatter 已被 .NET 标记为废弃，存在反序列化安全问题，
-    /// 并且在 IL2CPP / WebGL 等 AOT 平台上不可用，因此默认不使用该模式。
-    /// 如需真正的跨平台二进制存档，应改用 JsonUtility + 自写二进制读写，或 MessagePack 等第三方序列化。
     /// </summary>
     protected virtual void SaveBinary(GameData data, int index)
     {
@@ -214,7 +209,6 @@ public class GameSaver : Singleton<GameSaver>
         var json = data.ToJson();
         var key = index.ToString();
         PlayerPrefs.SetString(key, json);
-        PlayerPrefs.Save(); // 立即写入磁盘，避免异常退出时丢失存档
     }
 
     /// <summary>

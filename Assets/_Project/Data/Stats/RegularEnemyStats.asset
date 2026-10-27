@@ -17,10 +17,18 @@ MonoBehaviour:
   rotationSpeed: 970
   deceleration: 28
   friction: 16
+  turningDrag: 28
+  canAttackOnContact: 1
   contactPushback: 1
+  contactOffset: 0.15
   contactDamage: 1
   contactPushBackForce: 18
-  spotRage: 6
-  viewRage: 8
+  contactSteppingTolerance: 0.1
+  spotRange: 6
+  viewRange: 8
   followAcceleration: 10
   followTopSpeed: 2.5
+  faceWaypoint: 1
+  waypointMinDistance: 0.5
+  waypointAcceleration: 10
+  waypointTopSpeed: 2

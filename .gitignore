@@ -1,17 +1,42 @@
-# Unity generated folders
-/Library/
-/Temp/
-/Obj/
-/obj/
-/Build/
-/Builds/
-/Logs/
-/UserSettings/
+# ============================================================
+# Unity 工程标准 .gitignore
+# 基于 GitHub 官方 Unity 模板：
+# https://github.com/github/gitignore/blob/main/Unity.gitignore
+# ============================================================
 
-# Unity generated files
+# ---------- Unity 打开工程时自动生成 ----------
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Unity Test Framework 运行测试时生成
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Assets 下的 .meta 永不忽略（Unity 依赖它识别资源）
+!/[Aa]ssets/**/*.meta
+
+# Rider 自动生成的插件目录
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# IDE 缓存
+/.vs/
+/.idea/
+/.vscode/
+
+# 自动生成的解决方案与工程文件
+ExportedObj/
+.consulo/
 *.csproj
+*.unityproj
 *.sln
 *.suo
+*.tmp
 *.user
 *.userprefs
 *.pidb
@@ -22,21 +47,47 @@
 *.opendb
 *.VC.db
 
-# Unity crash reports and memory captures
-/MemoryCaptures/
-/Recordings/
+# 调试文件对应的 .meta
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
 
-# IDE/editor folders
-/.idea/
-/.vs/
-.vscode/
+# 崩溃报告与转储
+sysinfo.txt
+*.stackdump
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Build artifacts
+# 构建产物
 *.apk
 *.aab
 *.unitypackage
 *.app
+
+# Crashlytics 生成文件
+crashlytics-build.properties
+
+# Gradle 缓存
+.gradle/
+
+# Addressables 打包数据
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# 自动生成的 Android StreamingAssets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ---------- 本地环境 / 个人配置 ----------
+# 操作系统自动生成
+.DS_Store
+Thumbs.db
+desktop.ini
+# Visual Studio 环境检测文件
+/.vsconfig
+# Rider 运行配置（如需团队共享可删除本行）
+/.run/
+# Unity Version Control 配置（未使用可删除）
+/.collabignore
+
+# ---------- 个人文档 / 本地工具状态（不同步） ----------
+/面试准备知识库.md
+/.codebuddy/
+/.dsh/

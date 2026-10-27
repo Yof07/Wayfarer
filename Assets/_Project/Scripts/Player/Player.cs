@@ -128,8 +128,13 @@ public class Player : Entity<Player>
             FaceDirectionSmooth(damageDir);
 
             lateralVelocity = -transform.forward * stats.current.hurtBackwardsForce;
-            verticalVelocity = Vector3.up * stats.current.hurtUpwardForce;
-            states.Change<HurtPlayerState>();
+
+            // 如果不在水中，则会被击飞向上并进入受伤状态
+            if (!onWater)
+            {
+                verticalVelocity = Vector3.up * stats.current.hurtUpwardForce;
+                states.Change<HurtPlayerState>();
+            }
 
             playerEvents?.OnHurt?.Invoke();
 

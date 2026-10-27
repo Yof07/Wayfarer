@@ -88,6 +88,8 @@ desktop.ini
 /.collabignore
 
 # ---------- 个人文档 / 本地工具状态（不同步） ----------
-/面试准备知识库.md
+# 忽略所有 Markdown 文档，仅保留 README（规则不含斜杠，所有层级生效）
+*.md
+!README.md
 /.codebuddy/
 /.dsh/

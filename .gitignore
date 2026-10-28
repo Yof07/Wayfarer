@@ -91,5 +91,8 @@ desktop.ini
 # 忽略所有 Markdown 文档，仅保留 README（规则不含斜杠，所有层级生效）
 *.md
 !README.md
+# 忽略所有 jpeg（本地长截图等），Assets 内作为美术资源的 jpeg 仍然跟踪
+*.jpeg
+!/[Aa]ssets/**/*.jpeg
 /.codebuddy/
 /.dsh/
